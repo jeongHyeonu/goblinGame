@@ -26,5 +26,6 @@ public class QuestManager : MonoBehaviour
     {
         CrystalCnt++;
         progress.text = "ÁøÇàµµ : " + CrystalCnt + " / " + MaxCrystalCnt;
+        if (CrystalCnt == MaxCrystalCnt) Goblin.instance.GotoHome();
     }
 }

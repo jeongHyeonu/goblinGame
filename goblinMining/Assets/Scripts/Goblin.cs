@@ -100,4 +100,10 @@ public class Goblin : MonoBehaviour
         if(target!=null)
         target.GetComponent<Crystal>().Damaged(2);
     }
+
+    public void GotoHome()
+    {
+        agent.SetDestination(HomePos.transform.position);
+        animator.SetTrigger("Idle");
+    }
 }

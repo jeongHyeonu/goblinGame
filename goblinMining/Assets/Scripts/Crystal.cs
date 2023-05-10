@@ -25,7 +25,6 @@ public class Crystal : MonoBehaviour
 
     public void CrystalMineComplete()
     {
-        HPManager.instance.Cristal.Remove(this.gameObject);
         Goblin.instance.target = null;
         Goblin.instance.isMining = false;
         //Goblin.instance.agent.SetDestination(Goblin.instance.HomePos.transform.position);

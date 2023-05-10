@@ -8,7 +8,7 @@ public class HPManager : MonoBehaviour
     public static HPManager instance;
 
     [SerializeField] public GameObject Goblin;
-    [SerializeField] public List<GameObject> Cristal;
+    [SerializeField] public GameObject Cristals;
     private Vector3 goblinPos;
     private Vector3[] cristalPos = new Vector3[100];
 
@@ -26,10 +26,10 @@ public class HPManager : MonoBehaviour
     void Start()
     {
         instance = this;
-        for(int i = 0; i < Cristal.Count; i++)
+        for(int i = 0; i < Cristals.transform.childCount; i++)
         {
             CristalHPBarLIst[i] = Instantiate(CristalHPBar,this.transform);
-            Cristal[i].GetComponent<Crystal>().HPBar = CristalHPBarLIst[i];
+            Cristals.transform.GetChild(i).GetComponent<Crystal>().HPBar = CristalHPBarLIst[i];
             CristalHPBarLIst[i].SetActive(true);
         }
     }
@@ -41,10 +41,10 @@ public class HPManager : MonoBehaviour
         goblinPos = new Vector3(goblinPos.x, goblinPos.y + 2f, goblinPos.z);
         GoblinHPBar.transform.position = goblinPos;
 
-        for (int i = 0; i < Cristal.Count; i++)
+        for (int i = 0; i < Cristals.transform.childCount; i++)
         {
-            CristalHPBarLIst[i].GetComponent<Slider>().value = (float)Cristal[i].GetComponent<Crystal>().HP / (float)Cristal[i].GetComponent<Crystal>().maxHP;
-            cristalPos[i] = Cristal[i].transform.position;
+            CristalHPBarLIst[i].GetComponent<Slider>().value = (float)Cristals.transform.GetChild(i).GetComponent<Crystal>().HP / (float)Cristals.transform.GetChild(i).GetComponent<Crystal>().maxHP;
+            cristalPos[i] = Cristals.transform.GetChild(i).transform.position;
             cristalPos[i] = new Vector3(cristalPos[i].x, cristalPos[i].y + 2f, cristalPos[i].z);
             CristalHPBarLIst[i].transform.position = cristalPos[i];
         }

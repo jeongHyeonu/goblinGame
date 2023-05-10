@@ -286,7 +286,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   target: {fileID: 0}
-  HomePos: {fileID: 604142316}
+  HomePos: {fileID: 1809046897}
   isMining: 0
 --- !u!1 &26712553 stripped
 GameObject:
@@ -571,7 +571,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 792963447}
   m_FillRect: {fileID: 411792255}
   m_HandleRect: {fileID: 792963446}
@@ -1172,12 +1172,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411792254}
   m_CullTransparentMesh: 1
---- !u!1 &604142316 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4388793263340987975, guid: efd01e33679ff0248a65fdc17932d295,
-    type: 3}
-  m_PrefabInstance: {fileID: 1897462665}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &701194353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,11 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goblin: {fileID: 1395425}
-  Cristal:
-  - {fileID: 1929381224}
-  - {fileID: 407679371}
-  - {fileID: 26712553}
-  - {fileID: 73984702}
+  Cristals: {fileID: 1709829876}
   GoblinHPBar: {fileID: 286560856}
   CristalHPBar: {fileID: 1801904764}
 --- !u!1 &1007594246
@@ -2333,7 +2323,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1117693643}
   m_FillRect: {fileID: 1397208120}
   m_HandleRect: {fileID: 1117693641}
@@ -2368,6 +2358,37 @@ RectTransform:
   m_AnchoredPosition: {x: 11.57, y: 4}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1809046897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1809046898}
+  m_Layer: 0
+  m_Name: HomePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809046898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809046897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.781, y: 1.18, z: -6.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846275921
 GameObject:
   m_ObjectHideFlags: 0
